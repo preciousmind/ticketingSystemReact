@@ -67,7 +67,7 @@ const CreateUser = (props) => {
         <Label sm={1}>Password</Label>
         <Col sm={11}>
           <Input
-            type="text"
+            type="password"
             onChange={e => {
               getFormData(e.target.value, "Pwd");
             }}
