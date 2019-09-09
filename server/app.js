@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use("/api", router);
 
-// if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, '../client/build')));
   
@@ -39,7 +39,7 @@ app.use("/api", router);
     app.get('*', function (req, res) {
       res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     });
-//   }
+  }
 
 // Start the server
 app.listen(5000);
