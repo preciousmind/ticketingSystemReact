@@ -1,0 +1,66 @@
+@import "../../lib/_mixins.scss";
+@import "../../lib/_variables.scss";
+
+.container {
+  padding: 20px;
+  color: white;
+}
+
+// .list-container {
+//   width: 80%;
+//   display: inline-block;
+//   li {
+//     width: 100%;
+//     list-style: none;
+//     p {
+//       width: 45%;
+//       display: inline-block;
+//       padding: 10px;
+//       &:first-child {
+//         width: 20%;
+//       }
+//     }
+//   }
+// }
+// textarea {
+//   width: 80%;
+//   margin: 10px 0 !important;
+// }
+// .dropdown-container {
+//   float: right;
+//   .dropdown {
+//     margin: 15px 0;
+//   }
+// }
+
+// .list-container li p:first-child {
+//   text-align: right;
+// }
+
+.container {
+  @include mq("desktop-wide") {
+    width: 95%;
+    background: $blue;
+  }
+
+  @include mq("laptop") {
+    width: 95%;
+    background: red;
+  }
+
+  @include mq("phone") {
+    width: 95%;
+    background: $maroon;
+  }
+
+  @include mqlg("phone") {
+    width: 95%;
+    background: rgb(179, 179, 180);
+  }
+
+
+  @include mqlg("tablet-wide") {
+    width: 700px;
+    background: $drakGray;
+  }
+}
