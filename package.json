@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-build": "cd client && npm run build",
     "devProdStart": "npm run client-build && npm run start NODE_ENV=production",
-    "start": "node server/app.js --ignore client",
+    "start": "node server/app.js",
     "heroku-postbuild": "npm install && npm i client --prefix && npm run build --prefix client",
     "server": "nodemon server/app.js --watch server --ignore client",
     "client": "npm start --prefix client",
